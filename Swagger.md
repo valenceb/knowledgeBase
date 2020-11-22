@@ -9,7 +9,7 @@
 
 ## SpringBoot集成Swagger
 
-1. 新建一个SpringBoot = Web项目
+1. 新建一个Spring Initializer-> Web项目
 
 2. [Maven Repository: Springfox swaggger (mvnrepository.com)](https://mvnrepository.com/search?q=Springfox+swaggger)
 
@@ -32,7 +32,23 @@
 
 4. 放到Pom.xml的Dependencies节点
 
-5. 配置Swagger -> src/main/java/com/[projectName]/swagger/config/SwaggerConfig.java
+5. 编写一个Hello World
+
+   1. src/main/java/com/[projectName]/swagger/controller/HelloController
+
+   2. ``` Java
+      @RestContoller
+      public class HelloController {
+          @RequestMapping("/hello")
+          public String hello(){
+              return "hello";
+          }
+      }
+      ```
+
+   3. 
+
+6. 配置Swagger -> src/main/java/com/[projectName]/swagger/config/SwaggerConfig.java
 
    ``` java
    @Configuration
@@ -61,7 +77,7 @@
        }
    }
    ```
-   
-6. 测试运行：http://localhost:8080/swagger-ui.html
 
-7. 
+7. 测试运行：http://localhost:8080/swagger-ui.html
+
+8. 
