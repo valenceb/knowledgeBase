@@ -32,13 +32,33 @@
 
 4. 放到Pom.xml的Dependencies节点
 
-5. 配置Swagger -> Config
+5. 配置Swagger -> src/main/java/com/[projectName]/swagger/config/SwaggerConfig.java
 
    ``` java
    @Configuration
    @EnableSwagger2		//开启Swaagger2
    public class SwggerConfig {
-    
+       //配置了Swagger的Docket的bean实例
+       @Bean
+       public Docket docket(){
+           return new Docket(DocumentationType.SWAGGER_2)
+               .apiInfo(apiInfo());
+       }
+       //配置Swagger信息=apiInfo
+       private ApiInfo apiInfo{
+           //作者信息
+           Contact contact = new Contact(name:"Vance Bai", url:"https://你的URL",email:"valence.bai@qq.com");
+           return new ApiInfo(
+               title:"你自己的SwaggerAPI文档",
+               description:"",
+               version:"v1.0",
+               termsofServiceUrl:"https://你的URL",
+               contact,
+               license:"Apache 2.0",
+               licenseUrl:"http://www.apache.org/licenses/LICENSE-2.0",
+               new ArrayList()
+           );
+       }
    }
    ```
    
