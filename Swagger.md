@@ -31,3 +31,17 @@
    ```
 
 4. 放到Pom.xml的Dependencies节点
+
+5. 配置Swagger -> Config
+
+   ``` java
+   @Configuration
+   @EnableSwagger2		//开启Swaagger2
+   public class SwggerConfig {
+    
+   }
+   ```
+   
+6. 测试运行：http://localhost:8080/swagger-ui.html
+
+7. 
