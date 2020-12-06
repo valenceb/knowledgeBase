@@ -46,7 +46,7 @@
       }
       ```
 
-   3. 
+      
 
 6. 配置Swagger -> src/main/java/com/[projectName]/swagger/config/SwaggerConfig.java
 
@@ -80,4 +80,3 @@
 
 7. 测试运行：http://localhost:8080/swagger-ui.html
 
-8. 
